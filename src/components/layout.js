@@ -8,8 +8,10 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
+import { ConfigProvider } from "antd";
 import Header from "./header";
 import NewHeader from "./Header/header";
+
 import "./layout.css";
 
 const Layout = ({ children }) => {
@@ -24,10 +26,11 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
+    <ConfigProvider>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+
       <NewHeader />
-    </>
+    </ConfigProvider>
   );
 };
 

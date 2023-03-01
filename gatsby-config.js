@@ -25,6 +25,8 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-use-dark-mode`,
+    `gatsby-plugin-less`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
